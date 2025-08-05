@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> */ -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <style>
         /* 未访问的链接 */
         a {
@@ -21,17 +23,17 @@
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: 'IBM Plex Sans', sans-serif;
             color: #333;
-            font-size: 16px
+            font-size: 20px
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 24px;
         }
         h1, h2, h3 {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             color: #333;
         }
         p {
@@ -68,7 +70,8 @@
         h1 {
             font-size: 4em;
             margin: 0;
-            color: rgba(255, 255, 255, 0.7)
+            /* color: rgba(255, 255, 255, 0.7) */
+            color: #f2f2f2;
         }
         .tagline {
             font-size: 1.5em;
@@ -104,7 +107,7 @@
             flex: 1;
             padding: 10px;
             min-width: 300px;
-            style="text-align: justify;"
+            text-align: justify;
         }
 
         /* 联系方式 */
@@ -135,27 +138,58 @@
             background-color: #45a049;
         }
         .experience-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #f9f9f9; /* 浅灰色背景 */
-    border-left: 4px solid #4CAF50; /* 左侧的绿色边框 */
-    border-radius: 5px; /* 圆角效果 */
-    }
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9; /* 浅灰色背景 */
+            border-left: 4px solid #8e8e8e;  /* 从绿色改为中性灰 */
+            border-radius: 5px; /* 圆角效果 */
+            transition: border-color 0.3s;
+        }
 
-    .experience-item h3 {
-        margin-top: 0;
-        color: #333; /* 深灰色标题 */
-    }
+        .experience-item h3 {
+            margin-top: 0;
+            color: #333; /* 深灰色标题 */
+        }
     
-    .experience-item p {
-        margin: 5px 0;
-    }
+        .experience-item p {
+            margin: 5px 0;
+
+        }
     
-    .experience-item p strong {
-        color: #4CAF50; /* 强调日期的绿色 */
-    }
+        .experience-item p strong {
+            color: #444;  /* 不用绿色了，更低调稳重 */
+            font-weight: 600;
+        }
+
+        .about-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .research-item {
+            margin-bottom: 50px;
+        }
+        .research-item h3 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 600px) {
+            body {
+            font-size: 18px;
+            }
+        }
+
     </style>
 </head>
+
 <body>
 
     <!-- 头部部分 -->
@@ -170,85 +204,66 @@
     <section class="section">
         <div class="container">
             <h2>About Me</h2>
-            <img src="assets/images/p7167503.JPG" alt="Profile Image" class="profile-image"> <!-- 替换为你的头像 -->
-            <p>Hello! I'm <strong>Gang Li</strong>, but I prefer if you just call me 'Ligang'. </p>
-            <p>I work in the field of astronomy research. Specifically, I study the seismic activities (like earthquakes) of stars, known as stellar pulsations or oscillations, with the technical term being asteroseismology. </p>
-
-            <p>Contact email: 
+            <div class="about-wrapper">
+                <img src="assets/images/p7167503.JPG" alt="Profile Image" class="profile-image">
+                <div class="about-text">
+                <p>Hello! I'm <strong>Gang Li (李刚)</strong>. You can call me 'Gang' or, preferably, 'Ligang'.</p>
+                <p>I work in the field of astronomy research. Specifically, I study the seismic activities (like earthquakes) of stars, known as stellar pulsations or oscillations, with the technical term being asteroseismology.</p>
+                <p>
+                Contact email:
                 <script type="text/javascript">
-                document.write('<a href="mailto:' + 'gang.li' + '@' + 'kuleuven.be">' + 'gang.li' + '[at]'+ 'kuleuven.be' + '</a>');
+                    document.write('<a href="mailto:' + 'gang.li' + '@' + 'kuleuven.be">' + 'gang.li' + '[at]'+ 'kuleuven.be' + '</a>');
                 </script>
-            </p>
-            
-            <p>To view my full publication in ADS, <a href="https://ui.adsabs.harvard.edu/public-libraries/Os99jcJ7SzKd_JrdE0dtGg" target="_blank">click here</a>.</p>
-            
-            <p>To download my full CV, <a href="files/Gang_CV.pdf" download="Gang_Li_CV.pdf">click here</a>.</p>
+                </p>
+                <p>To view my full publication in ADS, <a href="https://ui.adsabs.harvard.edu/public-libraries/Os99jcJ7SzKd_JrdE0dtGg" target="_blank">click here</a>.</p>
+                <p>To download my full CV, <a href="files/Gang_CV.pdf" download="Gang_Li_CV.pdf">click here</a>.</p>
+            </div>
         </div>
+      </div>
     </section>
 
     <!-- 研究领域 -->
     <section class="section">
-        <div class="container"  style="text-align: justify; font-family: 'Helvetica', sans-serif;">
-            <h2>My Research</h2>
-            <p> 
-                I am dedicated to probing the internal structure of stars using stellar oscillations, particularly focusing on measuring internal magnetic fields, rotation, and tidal interactions. 
-                My research focuses on handling large datasets from the era of space-based telescopes, encompassing a wide range of targets, including main sequence stars, red giants, binary stars, and star clusters.
-                My extensive analyses led me to the discovery of central magnetic fields in red giants, published by Nature <a href="https://ui.adsabs.harvard.edu/abs/2022Natur.610...43L/abstract" target="_blank">(Li et al. 2022)</a>.
-            </p>
-            <div class="row">
-                <div class="column">
-                    <h3>Central magnetic fields in red giant stars</h3>
-                    <p>
-                    In my Nature paper (<a href="https://ui.adsabs.harvard.edu/abs/2022Natur.610...43L/abstract" target="_blank">Li et al. 2022</a>) and subsequent papers (
-                    <a href="https://ui.adsabs.harvard.edu/abs/2023A%26A...680A..26L/abstract" target="_blank">Li et al. 2023</a>;
-                    <a href="https://ui.adsabs.harvard.edu/abs/2023A%26A...670L..16D/abstract" target="_blank">Deheuvels et al. 2023</a>), 
-                    I reported for the first time on the magnetic fields at the centres of a dozen red giants. By searching
-                    through a sample of thousands of red giants, I identified the very rare frequency shifts in oscillations
-                    caused by magnetic fields. Using our newly proposed theory, I successfully measured the strength and
-                    structure of these magnetic fields and demonstrated their evolution.
-                    </p>
-                    <p>   
-                    The internal magnetic fields of stars have always been an important yet missing piece in stellar physics.
-                    Magnetic fields are believed to transport angular momentum, modify element transport, and consequently
-                    affect the age and evolution of stars. However, the well-known spectroscopic observations using the Zeeman
-                    effect cannot detect the internal magnetic fields of stars. Therefore, asteroseismology has become the only
-                    possible method to detect them, and furthermore, the magnetic fields discovered in my work have finally
-                    filled in the missing piece of the puzzle.
-                    </p>
-                </div>
-                <div class="column">
-                    <h3>Seismic measurements of stellar internal rotation profiles</h3>
-                    <p>
-                        My work in <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.491.3586L/abstract" target="_blank">Li et al. (2020b)</a> reported the near-core rotation rates in 611 early-type main-sequence stars
-                        using their internal oscillation signals. These stars will evolve into red giant stars. To investigate how
-                        their rotation rates change over different evolutionary stages, I further measured the internal rotation
-                        rates in 2006 red giant stars <a href="https://ui.adsabs.harvard.edu/abs/2024arXiv240512116L/abstract" target="_blank">(Li et al. 2024b)</a>. 
-                        My findings clearly depicted the evolution of stellar internal
-                        rotation. My work represents the largest sample of stellar internal rotation rates to date, which is valuable
-                        for studying angular momentum transport in stellar interiors. In addition, my work about the core rotation
-                        rates in binaries <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.4363L/abstract" target="_blank">(Li et al. 2020a)</a> 
-                        revealed a new phenomenon of tides: they not only synchronize the orbit
-                        but can also continue to slow down the rotation period to hundreds of days!
-                    </p>
-                    <p>
-                        My observational work presents a significant challenge to current stellar physics. Currently,
-                        no theory can satisfactorily reproduce the relation between core rotation rates and stellar evolution that I
-                        have reported in my studies, which implies a poor understanding of angular momentum transport inside
-                        stars. Angular momentum transport affects the distortion of stars and the transport of internal elements,
-                        making it impossible to accurately predict stellar evolution. For example, the current estimates of stellar
-                        ages still have uncertainties of up to several tens of per cent. Therefore, there is an urgent need for more
-                        observations and theoretical work to address this issue.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="container" style="text-align: justify;">
+    <h2>My Research</h2>
+    <p>
+      I am dedicated to probing the internal structure of stars using stellar oscillations, particularly focusing on measuring internal magnetic fields, rotation, and tidal interactions. My research focuses on handling large datasets from the era of space-based telescopes, encompassing a wide range of targets, including main sequence stars, red giants, binary stars, and star clusters. My extensive analyses led me to the discovery of central magnetic fields in red giants, published by Nature <a href="https://ui.adsabs.harvard.edu/abs/2022Natur.610...43L/abstract" target="_blank">(Li et al. 2022)</a>.
+    </p>
+
+    <div class="research-item">
+      <h3>Central magnetic fields in red giant stars</h3>
+      <p>In my Nature paper (<a href="https://ui.adsabs.harvard.edu/abs/2022Natur.610...43L/abstract" target="_blank">Li et al. 2022</a>) and subsequent papers (<a href="https://ui.adsabs.harvard.edu/abs/2023A%26A...680A..26L/abstract" target="_blank">Li et al. 2023</a>; <a href="https://ui.adsabs.harvard.edu/abs/2023A%26A...670L..16D/abstract" target="_blank">Deheuvels et al. 2023</a>), I reported for the first time on the magnetic fields at the centres of a dozen red giants. By searching through a sample of thousands of red giants, I identified the very rare frequency shifts in oscillations caused by magnetic fields. Using our newly proposed theory, I successfully measured the strength and structure of these magnetic fields and demonstrated their evolution.</p>
+      <p>The internal magnetic fields of stars have always been an important yet missing piece in stellar physics. Magnetic fields are believed to transport angular momentum, modify element transport, and consequently affect the age and evolution of stars. However, the well-known spectroscopic observations using the Zeeman effect cannot detect the internal magnetic fields of stars. Therefore, asteroseismology has become the only possible method to detect them, and furthermore, the magnetic fields discovered in my work have finally filled in the missing piece of the puzzle.</p>
+    </div>
+
+    <div class="research-item">
+      <h3>Seismic measurements of stellar internal rotation profiles</h3>
+      <p>My work in <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.491.3586L/abstract" target="_blank">Li et al. (2020b)</a> reported the near-core rotation rates in 611 early-type main-sequence stars using their internal oscillation signals. These stars will evolve into red giant stars. To investigate how their rotation rates change over different evolutionary stages, I further measured the internal rotation rates in 2006 red giant stars <a href="https://ui.adsabs.harvard.edu/abs/2024arXiv240512116L/abstract" target="_blank">(Li et al. 2024b)</a>.</p>
+      <p>My findings clearly depicted the evolution of stellar internal rotation. My work represents the largest sample of stellar internal rotation rates to date, which is valuable for studying angular momentum transport in stellar interiors. In addition, my work about the core rotation rates in binaries <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.4363L/abstract" target="_blank">(Li et al. 2020a)</a> revealed a new phenomenon of tides: they not only synchronize the orbit but can also continue to slow down the rotation period to hundreds of days!</p>
+      <p>My observational work presents a significant challenge to current stellar physics. Currently, no theory can satisfactorily reproduce the relation between core rotation rates and stellar evolution that I have reported in my studies, which implies a poor understanding of angular momentum transport inside stars. Angular momentum transport affects the distortion of stars and the transport of internal elements, making it impossible to accurately predict stellar evolution. For example, the current estimates of stellar ages still have uncertainties of up to several tens of per cent. Therefore, there is an urgent need for more observations and theoretical work to address this issue.</p>
+    </div>
+
+    <div class="research-item">
+        <h3>Cluster-asteroseismology synergistic research</h3>
+        <p>During my research experience at KU Leuven and my subsequent work at UniSQ under the ARC DECRA funding, I will be dedicated to developing asteroseismology in stellar clusters. This synergistic research offers a unique opportunity to further study stellar internal physics.</p>
+        <p>Star clusters are ideal laboratories for studying stellar physics, as the stars within a given cluster share the same distance, age, and metallicity. Their temperatures, luminosities (which are costly to determine spectroscopically), and masses can be readily estimated from the colour-magnitude diagram. These parameters help constrain seismic models and lift degeneracies.</p>
+        <p>Meanwhile, well-constrained seismic models in clusters can reveal how internal physical processes—such as overshooting and rotation—shape stellar evolutionary tracks, thereby deepening our understanding of both cluster and individual stellar evolution.</p>
+        <p>Several observational papers have been completed. For example, we discovered a rich population of gravity-mode pulsators in NGC 2516 (<a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...686A.142L/abstract" target="_blank">Li et al. 2024a</a>) and UBC 1 (<a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...681A..13F/abstract" target="_blank">Fritzewski et al. 2024</a>) using TESS data. A seismology–spectroscopy cross-match has also been carried out in NGC 3532 (<a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...979..246H/abstract" target="_blank">He et al. 2025</a>). The modelling results for NGC 2516 will be released soon. </p>
+    </div>
+  </div>
+</section>
 
 <!-- 教育与工作 -->
 <section class="section">
     <div class="container">
         <h2>Education and Work Experience</h2>
-        
+
+        <div class="experience-item">
+            <h3>Lecturer at the University of Southern Queensland, Australia</h3>
+            <p><strong>From Nov 2025</strong></p>
+            <p>Collaborating with Dr. Simon Murphy under <a href="https://www.arc.gov.au/funding-research/funding-schemes/discovery-program/discovery-early-career-researcher-award-decra" target="_blank">ARC DECRA</a> funding. </p>
+        </div>
+
         <div class="experience-item">
             <h3>Postdoctoral Researcher at KU Leuven, Belgium</h3>
             <p><strong>From Nov 2022 to now</strong></p>
